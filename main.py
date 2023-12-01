@@ -65,7 +65,7 @@ class Operacion:
 BD = []
 OPERACIONES = []
 
-# Funciones auxiliares
+# Funciones de ayuda TEST
 def agregar_cuenta(numero, titular, saldo, conexiones):
     cuenta = Cuenta(numero, titular, saldo, conexiones)
     BD.append(cuenta)
@@ -86,7 +86,7 @@ def buscar_cuenta_por_numero(numero):
             return contactos
     return {"message": "La cuenta no se encontró."}
 
-# Endpoints
+# Endpoints de nuestra API
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
